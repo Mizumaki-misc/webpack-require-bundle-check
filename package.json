@@ -1,5 +1,5 @@
 {
-  "name": "webpack-test",
+  "name": "webpack-require-bundle-check",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

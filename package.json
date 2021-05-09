@@ -4,10 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "npm run build:existed && npm run build:unknown && npm run build:defineEnv && npm run build:unexisted",
+    "build": "npm run build:existed && npm run build:unknown && npm run build:defineEnv && npm run build:defineEnvFromProcess && npm run build:defineEnvVariable && npm run build:unexisted",
     "build:existed": "webpack -c ./webpack.config.existed.js",
     "build:unknown": "webpack -c ./webpack.config.unknown.js",
     "build:defineEnv": "webpack -c ./webpack.config.define-env.js",
+    "build:defineEnvFromProcess": "CONFIG_FILENAME=world webpack -c ./webpack.config.define-env-from-process.js",
+    "build:defineEnvVariable": "webpack -c ./webpack.config.define-env-variable.js",
     "build:unexisted": "webpack -c ./webpack.config.unexisted.js",
     "start": "node ./dist/existed_bundle.js && CONFIG_FILENAME=world node ./dist/unknown_bundle.js && node ./dist/define-env_bundle.js"
   },
